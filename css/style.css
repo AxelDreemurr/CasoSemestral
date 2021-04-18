@@ -26,7 +26,7 @@ header{
     left: 0;
     width: 100%;
     padding: 5px 10px;
-    background-color: rgb(247, 250, 101);
+    background-color: rgb(88, 175, 93);
 
     /*Flex*/
     display: flex;
@@ -222,11 +222,10 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: rgb(247, 250, 101);
+    background-color: rgb(88, 175, 93);
     color: black;
     padding: 20px 0;
 }
-
 
 
 
