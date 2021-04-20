@@ -359,17 +359,15 @@ form {
     padding: 10px 18px;
     background-color: #f44336;
   }
-  
-  /* Center the avatar image inside this container */
-  .imgcontainer {
-    text-align: center;
-    margin: 24px 0 12px 0;
-  }
+
   
   /* Avatar image */
   img.avatar {
+    display: block;
+    margin-left: 140%;
     width: 40%;
     border-radius: 50%;
+
   }
   
   /* Add padding to containers */
@@ -382,6 +380,11 @@ form {
     float: right;
     padding-top: 16px;
   }
+
+.form form img{
+    display: block;
+    margin: auto;
+}
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (max-width: 300px) {
@@ -394,16 +397,40 @@ form {
     }
   }
 
-
-
-
-
 /*Responsive*/
 
+@media (max-width:1000px){
+    header nav li a{
+        font-size: 13px ;
+    }
 
+}
+
+
+@media (max-width:600px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav li a{
+        font-size: 15px;
+    }
+
+    .category-list a{
+        font-size: 15px;
+        border-radius: 15px;
+    }
+
+    .products-list .product-item a{
+        font-size: 14px;
+    }
+
+}
 
 @media (max-width:700px){
     header{
+        display: flex ;
         flex-direction: column;
     }
     header nav{
@@ -412,7 +439,14 @@ form {
     header .logo img{
         width: 100%;
     }
-    header nav li a{
+    header nav li{
+        display: flex;
+        flex-direction: column;
         font-size: 15px;
+    }
+
+    .banner ul{
+        margin-top: 50px;
+        padding-top: 50px;
     }
 }
