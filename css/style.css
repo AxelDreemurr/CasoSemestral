@@ -236,8 +236,10 @@ input[name=search] {
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-
 .category-list a:hover{
+    background: #920101;
+} 
+.category-list .ct_item-active{
     background: #920101;
 } 
 
