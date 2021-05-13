@@ -9,3 +9,6 @@ def about(request):
 
 def login(request):
     return render(request, 'app/login.html')
+
+def productos(request):
+    return render(request, 'app/productos.html')

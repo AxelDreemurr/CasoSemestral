@@ -1,33 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {%load static%}{% static 'app/' %}
-  <link rel="stylesheet" href="{% static 'app//css/style.css' %}">
-  <script src="{% static 'app/js/jquery-3.2.1.js' %}"></script>
-  <script src="{% static 'app/js/javascript.js' %}"></script>
-  <title>Jardín Comunitario JC</title>
+{% extends 'app/base.html' %}
+{% load static %}
 
-</head>
-<body>
-  <!--Logo_Busqueda_Nav-->
-  <div class="container">
-    <header>
-      <div>
-        <input type="text" name="search" placeholder="  Busca algún producto...">
-      </div>
-      <div class="logo">
-        <a href="index.html"><img src="{% static 'app/img/1eda7a920595361944650b58376e27ec-flor-roja-rosa-plana-by-vexels.png' %}" alt="" height="60px"></a> 
-      </div>
-      <nav>
-        <li><a href="index.html#shop" class="shop-btn">Catálogo</a></li>
-        <li><a href="about.html" class="contacto-btn">Contacto</a></li>
-        <li><a href="login.html" class="login-btn">Acceso socios</a></li>
-      </nav>
-    </header>
-    
+
+
+{% block contenido %}
+
     <!--slideshow-->
     <section class="banner">
       <div class="slider">        
@@ -38,22 +15,11 @@
           <li><img src="{% static 'app/img/maceteros-2.jpg' %}" alt=""></li>
           <li><img src="{% static 'app/img/flores-3.jpg' %}" alt=""></li>
         </ul>
-    </div>
+      </div>
     </section>
-
-    <!--Catálogo-->
+    <!--Tipo de productos-->
     <div class="wrap">
-      <h1>Escoge un producto</h1>
-      <div id=shop class="store-wrap">
-        <div class="category-list">
-          <a href="index.html#shop" class="category-item" category="all">Todo</a>
-          <a href="index.html#shop" class="category-item" category="tierra_hojas">Tierra de hojas</a>
-          <a href="index.html#shop" class="category-item" category="maceteros">Maceteros</a>
-          <a href="index.html#shop" class="category-item" category="arbustos">Arbustos</a>
-          <a href="index.html#shop" class="category-item" category="flores">Flores</a>
-        </div>
-
-
+      <h1>Productos destacados</h1>
         <section class="products-list">
           <div class="product-item" category="tierra_hojas">
             <img src="{% static 'app/img/tierra_hoja-cat.jpg' %}" alt="">
@@ -88,17 +54,15 @@
             <a href="#">Arbusto natural</a>
           </div>
         </section>
-
       </div>
-
     </div>
-    
-  </div>
+{% endblock  %}
 
-  <!--Footer-->
-  <footer class="footer1">
-    <p>Jardín Comunitario © <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Dream Team</a> 2021</p>
-</footer>
 
-</body>
-</html>
+
+
+
+
+
+
+
