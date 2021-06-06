@@ -4,43 +4,44 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  {%load static%}{% static 'app/' %}
-  <link rel="stylesheet" href="{% static 'app//css/style.css' %}">
-  <script src="{% static 'app/js/jquery-3.2.1.js' %}"></script>
-  <script src="{% static 'app/js/javascript.js' %}"></script>
-  {%block boostrap%}
-  
-  {%endblock%}
+  {%load static%}
+  <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
   <title>Jardín Comunitario JC</title>
 
 </head>
 <body>
   <!--Logo_Busqueda_Nav-->
-  <div class="container">
+  <div class="contenedor">
     <header>
-      <div>
-        <input type="text" name="search" placeholder="  Busca algún producto...">
-      </div>
-      <div class="logo">
+      <div class="logo_principal">
         <a href="{% url 'index'%}"><img src="{% static 'app/img/1eda7a920595361944650b58376e27ec-flor-roja-rosa-plana-by-vexels.png' %}" alt="" height="60px"></a> 
       </div>
+      <div>
+        <input type="text" name="search" placeholder="Busca algún producto...">
+      </div>
       <nav>
-        <li><a href="{% url 'productos'%}" class="shop-btn">Catálogo</a></li>
+        <li><a href="{% url 'productos'%}" class="producto-btn">Productos</a></li>
         <li><a href="{% url 'about' %}" class="contacto-btn">Contacto</a></li>
-        <li><a href="{% url 'login' %}" class="login-btn">Acceso socios</a></li>
+        <li><a href="{% url 'login' %}" class="socio-btn">Socios</a></li>
       </nav>
     </header>
-    
-    {%block contenido%}
+  </div>
+
+{%block contenido%}
 
 
-    {% endblock %}
+{% endblock %}
 
 
   <!--Footer-->
-<footer class="footer">
+  <footer class="footer">
     <p>Jardín Comunitario © <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">Dream Team</a> 2021</p>
-</footer>
+  </footer>
 
+  <script src="{% static 'app/js/jquery-3.2.1.js' %}"></script>
+  <script src="{% static 'app/js/javascript.js' %}"></script>
+  <script src="https://kit.fontawesome.com/2ffca1f776.js" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="{% static 'app/js/sweetAlert2.js' %}"></script>
 </body>
 </html>
