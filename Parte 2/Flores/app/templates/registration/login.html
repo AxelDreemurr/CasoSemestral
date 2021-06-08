@@ -7,11 +7,12 @@
         <div class="login">
           {% csrf_token %}
 
-          <table>
+          <table class="t_login">
             {{ form|crispy }}
           </table>
           <input type="submit" class="submit" value="Iniciar Sesión">
           <input type="reset" class="submit" value="Limpiar">
+          <a href="{% url 'registro_usuario' %}">¿No tienes cuenta?</a>
         </div>
     </form>
     {{ mensaje }}

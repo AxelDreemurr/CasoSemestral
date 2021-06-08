@@ -69,3 +69,27 @@ function confirmarModificar(id){
         }
     })
 }
+
+function exitoRegistro(){
+    Swal.fire({
+        title: 'Estás a punto de crear una nueva cuenta',
+        text: "Confirma dando click abajo y tu cuenta quedará habilitada.",
+        icon: 'info',
+        showCancelButton: false,
+        confirmButtonColor: '#4CAF50',
+        cancelButtonColor: '#d33',
+        confirmButtonText: '¡Sí, crear cuenta!',
+        cancelButtonText: '¡No, olvidé algo!',
+        backdrop: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+        Swal.fire(
+            '¡Cuenta creada con éxito!',
+            'Volviendo al homepage...',
+            'success'
+        ).then(function(){
+            window.location.href = "/index"
+        })
+        }
+    })
+}

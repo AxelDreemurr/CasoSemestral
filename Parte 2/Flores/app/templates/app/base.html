@@ -23,8 +23,8 @@
         <li><a href="{% url 'productos'%}" class="producto-btn">Productos</a></li>
         <li><a href="{% url 'about' %}" class="contacto-btn">Contacto</a></li>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'logout' %}" class="socio-btn">Cerrar Sesión</a></li>
-        <li><a href="{% url 'lista_productos' %}" class="socio-btn">Inventario</a></li>
+        <li><a href="{% url 'lista_productos' %}" class="inventario-btn">Inventario</a></li>
+        <li><a href="{% url 'logout' %}" class="socio-btn">Cerrar Sesión de {{user.first_name}}</a></li>
         {% else %}
         <li><a href="{% url 'login' %}" class="socio-btn">Acceso Staff</a></li>
         {% endif %}

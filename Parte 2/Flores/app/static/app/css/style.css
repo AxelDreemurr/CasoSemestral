@@ -75,6 +75,18 @@ header{
     transition: 0.3s;
 }
 
+.inventario-btn{
+    padding: 15px 30px;
+    border-radius: 99px;
+    background: rgb(53, 53, 197);
+}
+
+.inventario-btn:hover {
+    background-color: blue;
+    color: white;
+    transition: 0.3s;
+}
+
 
 header nav{
     /*Flex*/
@@ -303,7 +315,7 @@ footer {
 }
 
   /* Full-width inputs */
-.inicio-sesion input[name=uname], input[type=password] {
+.inicio-sesion input[type=text], input[type=password] {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;

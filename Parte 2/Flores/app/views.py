@@ -1,5 +1,6 @@
+from django.contrib.auth import authenticate
 from django.core import paginator
-from app.forms import productoForm
+from .forms import productoForm, SignUpForm
 from django.shortcuts import redirect, render
 from .models import producto
 from django.http import Http404
@@ -78,3 +79,17 @@ def eliminar(request, id):
     product.delete()
     
     return redirect(to="lista_productos")
+
+def registro_usuario(request):
+    datos = {
+        'form' : SignUpForm()
+    }
+
+    if request.method == 'POST':
+        formulario2 = SignUpForm(request.POST)
+        if formulario2.is_valid():
+            formulario2.save()
+            usuario = authenticate(username=formulario2.cleaned_data["username"],password=formulario2.cleaned_data["password1"])
+            return redirect(to='index')
+
+    return render(request, 'registration/signup.html', datos)
