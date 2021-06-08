@@ -17,12 +17,17 @@
         <a href="{% url 'index'%}"><img src="{% static 'app/img/1eda7a920595361944650b58376e27ec-flor-roja-rosa-plana-by-vexels.png' %}" alt="" height="60px"></a> 
       </div>
       <div>
-        <input type="text" name="search" placeholder="Busca algún producto...">
+        <!--<input type="text" name="search" placeholder="Busca algún producto...">-->
       </div>
       <nav>
         <li><a href="{% url 'productos'%}" class="producto-btn">Productos</a></li>
         <li><a href="{% url 'about' %}" class="contacto-btn">Contacto</a></li>
-        <li><a href="{% url 'login' %}" class="socio-btn">Socios</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'logout' %}" class="socio-btn">Cerrar Sesión</a></li>
+        <li><a href="{% url 'lista_productos' %}" class="socio-btn">Inventario</a></li>
+        {% else %}
+        <li><a href="{% url 'login' %}" class="socio-btn">Acceso Staff</a></li>
+        {% endif %}
       </nav>
     </header>
   </div>
