@@ -58,6 +58,9 @@ def agregar(request):
         if formulario.is_valid():
             formulario.save()
             datos['mensaje'] = "¡Producto añadido!"
+
+        datos['form'] = formulario
+
     return render(request, 'app/agregar.html', datos)
 
 def modificar(request, id):
@@ -71,7 +74,9 @@ def modificar(request, id):
         if formulario.is_valid():
             formulario.save()
             datos['mensaje'] = "¡Producto Modificado!"
-            datos['form'] = formulario  
+            
+        datos['form'] = formulario  
+        
     return render(request, 'app/modificar.html', datos)
 
 def eliminar(request, id):
