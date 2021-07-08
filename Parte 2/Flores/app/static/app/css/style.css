@@ -16,7 +16,7 @@ nav{
 a{
     text-decoration: none;
     cursor: pointer;
-    color: rgb(3, 7, 19);
+    color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: bold;
 }
@@ -37,6 +37,10 @@ header{
     display: -ms-flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.alert li{
+    color: #ff0000;
 }
 
 .producto-btn{
@@ -69,6 +73,19 @@ header{
     background: #f85656;
 }
 
+.icon-btn{
+    padding: 15px 20px;
+    border-radius: 99px;
+    background: #f85656;
+}
+
+.icon-btn:hover{
+    background-color: red;
+    color: white;
+    transition: 0.3s;
+}
+
+
 .socio-btn:hover {
     background-color: red;
     color: white;
@@ -78,7 +95,7 @@ header{
 .inventario-btn{
     padding: 15px 30px;
     border-radius: 99px;
-    background: rgb(53, 53, 197);
+    background: rgb(92, 92, 241);
 }
 
 .inventario-btn:hover {
@@ -243,6 +260,18 @@ input[name=search] {
     background: #38006db2;;
 }
 
+.peppo-logo{
+    margin: 100px;
+    padding: 500px;
+    background-color: #ebebeb;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: rgb(0, 0, 0);
+}
+
+
 footer {
     /* FLEX */
     display: -webkit-flex;
@@ -304,9 +333,26 @@ footer {
 
 /*LOGIN*/
 /* Bordered form */
+.card {
+    margin: 0px 90px 100px 90px;
+    background-color: #ebebeb;
+}   
+
+.titulo-login {
+    margin: 100px 90px 0px 90px;
+    padding: 10px;
+    background-color: rgb(88, 175, 93);
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    color: white;
+}
+
+
 .inicio-sesion {
     border: 3px solid #f1f1f1;
-    padding: 160px 90px;
+    padding: 100px 90px;
 }
 
 .imgcontainer{
@@ -363,77 +409,46 @@ footer {
     margin: auto;
 }
 
-  /* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-    display: block;
-    float: none;
-    }
-    .cancelbtn {
+.btn-registro{
     width: 100%;
-    }
-
-    .products-list .product-item a{
-        font-size: 10px;
-    }
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #1377fa;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+.btn-registro:hover {
+    opacity: 0.8;
 }
 
-/*Responsive*/
+.btn-clean {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: #f3d31c;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
 
-@media (max-width:1000px){
-    header nav li a{
-        font-size: 13px ;
-    }
-
+.btn-clean:hover {
+    opacity: 0.8;
 }
 
 
-@media (max-width:600px){
-    header{
-        display: flex;
-        flex-direction: column;
-    }
-
-    header nav li a{
-        font-size: 15px;
-    }
-
-
-    .products-list .product-item a{
-        font-size: 10px;
-    }
-}
-
-@media (max-width:700px){
-    header{
-        display: flex ;
-        flex-direction: column;
-    }
-    header nav{
-        margin-top: 10px;
-    }
-    header .logo_principal img{
-        width: 100%;
-    }
-    header nav li{
-        display: flex;
-        flex-direction: column;
-        font-size: 15px;
-    }
-
-    .banner ul{
-        margin-top: 50px;
-        padding-top: 50px;
-    }
-
-    .page-content{
-        padding-top: 100px;
-    }
-
-    .products-list .product-item a{
-        font-size: 10px;
-    }
-}
 
 /*Tienda*/
 
@@ -446,6 +461,7 @@ footer {
 }
 
 .precio{
+    margin-bottom: 10px;
     padding: 10px;
     background-color: #504f4f;
     color: #FFFFFF;
@@ -455,7 +471,7 @@ footer {
 
 .product{
     background-color: rgb(88, 175, 93);
-    padding: 2px 16px;
+    padding: 10px 16px;
     margin: 15px;
 
 }
@@ -471,7 +487,7 @@ footer {
     color: #FFFFFF;
 }
 
-.page-content button {
+.page-content a {
     border-radius: 4px;
     background-color: #f85656;
     border: none;
@@ -479,22 +495,21 @@ footer {
     text-align: center;
     font-size: 28px;
     padding: 5px;
-    width: 200px;
+    width: 140px;
     transition: all 0.5s;
     cursor: pointer;
-    margin: 10px;
-    margin-left: 50px;
     align-items: center;
+    align-content: center;
 }
 
-.page-content  button span {
+.page-content  a span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.page-content button span:after {
+.page-content a span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -503,11 +518,11 @@ footer {
     transition: 0.5s;
 }
 
-.page-content button:hover span {
+.page-content a:hover span {
     padding-right: 25px;
 }
 
-.page-content button:hover span:after {
+.page-content a:hover span:after {
     opacity: 1;
     right: 0;
 }
@@ -689,4 +704,377 @@ footer {
 
 .page-link:hover{
     background-color: rgb(29, 85, 33);
+}
+
+strong {
+    color: red;
+}
+
+/*Sin conexión*/
+
+@font-face {
+    src: url("https://www.axis-praxis.org/fonts/webfonts/MetaVariableDemo-Set.woff2")
+    format("woff2");
+    font-family: "Meta";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.NoConexion {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #92ff7c;
+    width: 100%;
+    height: 90vh;
+}
+
+.NoConexion main {
+    transition: all 0.5s;
+    -webkit-text-stroke: 4px #570013;
+    font-variation-settings: "wght" 900, "ital" 1;
+    font-size: 15rem;
+    text-align: center;
+    color: transparent;
+    font-family: "Meta", sans-serif;
+    text-shadow: 10px 10px 0px #a80024,
+        15px 15px 0px #f40404,
+        20px 20px 0px #ff9100,
+        25px 25px 0px #ffd000,
+        45px 45px 10px rgb(44, 88, 36);
+    cursor: pointer;
+}
+
+.NoConexion main:hover {
+    font-variation-settings: "wght" 100, "ital" 0;
+    text-shadow: none;
+}
+
+.form-sus{
+    background-color: #d10000;
+    padding: 10px 100px 10px 100px;
+    border-color: rgb(189, 0, 0);
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    color: white;
+}
+
+.btn-guardar:hover{
+    background-color: #2a642d;
+}
+
+#id_usuario, #id_email{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+@media screen and (min-width: 300px) {
+    span.psw {
+    display: block;
+    float: none;
+    }
+    .cancelbtn {
+    width: 100%;
+    }
+
+    .products-list .product-item a{
+        font-size: 10px;
+    }
+
+    #logout-btn{
+        font-size: 10px;
+    }
+    .inventario-btn{
+        padding: 15px 15px;
+    }
+
+    .contacto-btn{
+        padding: 15px 15px;
+    }
+
+    .producto-btn{
+        padding: 15px 15px;
+    }
+
+    .btn-agregarProducto{
+        margin: 100px 100px 0px 100px;
+    }
+}
+
+/*lista suscripcion*/
+#titulo-lista{
+    display: flex;
+    justify-content: center;
+    margin: 200px 0 0px 0;
+}
+#titulo-lista h1{
+    background-color: #01648b;
+    width: 90%;
+    text-align: center;
+    color: white;
+    border-bottom: solid 5px #003347;
+}
+.btn-modificarLista{
+    color: rgb(243, 247, 0);
+    padding: 10px;
+}
+.btn-eliminarLista{
+    color: rgb(247, 0, 0);
+    padding: 10px;
+}
+.contenido-lista {
+    display: flex;
+    justify-content: center;
+    margin: 0px 0 500px 0;
+}
+
+.contenido-lista table{
+    background-color: rgb(255, 255, 255);
+    text-align: left;
+    color: black;
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.contenido-lista td{
+    border-bottom: solid 3px #003347;
+    padding: 0;
+}
+.contenido-lista th{
+    border-bottom: solid 1px rgb(0, 0, 0);
+    border-left: solid 1px rgb(0, 0, 0);
+    border-right: solid 1px rgb(0, 0, 0);
+    background-color: #868686;
+    color: white;
+}
+/*Inputs agregar y modificar suscripciones y descuentos*/
+.textinput{
+    width: 300px;
+    height: 30px;
+}
+.numberinput{
+    width: 300px;
+    height: 30px;
+}
+
+/*Responsive*/
+
+@media (max-width:900px){
+    header nav li a{
+        font-size: 13px ;
+    }
+    .peppo-logo{
+        margin: 200px 100px 100px 100px;
+        padding: 100px;
+        background-color: #ebebeb;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        color: rgb(0, 0, 0);
+    }
+    header .logo_principal img{
+        width: 200px;
+    }
+
+    .socio-btn{
+        padding: 15px 10px;
+        border-radius: 99px;
+        background: #f85656;
+        font-size: small;
+    }
+
+    #logout-btn{
+        font-size: 10px;
+    }
+
+    .inventario-btn{
+        padding: 15px 15px;
+    }
+
+    .contacto-btn{
+        padding: 15px 15px;
+    }
+
+    .producto-btn{
+        padding: 15px 15px;
+    }
+
+    .btn-agregarProducto{
+        margin: 100px 100px 0px 100px;
+    }
+}
+
+
+@media (max-width:600px){
+    header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    header nav li a{
+        font-size: 15px;
+    }
+
+
+    .products-list .product-item a{
+        font-size: 10px;
+    }
+    .peppo-logo{
+        margin: 200px 100px 100px 100px;
+        padding: 100px;
+        background-color: #ebebeb;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        color: rgb(0, 0, 0);
+    }
+    header .logo_principal img{
+        width: 200px;
+    }
+
+    .socio-btn{
+        padding: 15px 10px;
+        border-radius: 99px;
+        background: #f85656;
+        font-size: small;
+    }
+
+    #logout-btn{
+        font-size: 10px;
+    }
+
+    .inventario-btn{
+        padding: 15px 15px;
+    }
+
+    .contacto-btn{
+        padding: 15px 15px;
+    }
+
+    .producto-btn{
+        padding: 15px 15px;
+    }
+
+    .btn-agregarProducto{
+        margin: 100px 100px 0px 100px;
+    }
+}
+
+@media (max-width:700px){
+    header{
+        display: flex ;
+        flex-direction: column;
+    }
+    header nav{
+        margin-top: 10px;
+    }
+    header .logo_principal img{
+        width: 200px;
+    }
+    header nav li{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    
+    }
+
+    .banner ul{
+        margin-top: 50px;
+        padding-top: 50px;
+    }
+
+    .page-content{
+        padding-top: 100px;
+    }
+
+    .products-list .product-item a{
+        font-size: 10px;
+    }
+
+    .peppo-logo{
+        margin: 200px 100px 100px 100px;
+        padding: 100px;
+        background-color: #ebebeb;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+        color: rgb(0, 0, 0);
+    }
+
+    .socio-btn{
+        padding: 15px 9px;
+        border-radius: 99px;
+        background: #f85656;
+        font-size: small;
+    }
+    
+    #logout-btn{
+        font-size: 10px;
+    }
+
+    .inventario-btn{
+        padding: 15px 15px;
+    }
+
+    .contacto-btn{
+        padding: 15px 15px;
+    }
+
+    .producto-btn{
+        padding: 15px 15px;
+    }
+
+    .btn-agregarProducto{
+        margin: 100px 100px 0px 100px;
+    }
+}
+
+@media (max-width:740px){
+    .socio-btn{
+        padding: 15px 1px;
+        border-radius: 99px;
+        background: #f85656;
+        font-size: small;
+    }
+    #logout-btn{
+        font-size: 10px;
+    }
+
+    .inventario-btn{
+        padding: 15px 15px;
+    }
+
+    .contacto-btn{
+        padding: 15px 15px;
+    }
+
+    .producto-btn{
+        padding: 15px 15px;
+    }
+
+    .btn-agregarProducto{
+        margin: 100px 100px 0px 100px;
+    }
+}
+
+/* Carrito */
+
+.placeholder{
+    color: black;
+    font-size: medium;
+    text-align: center;
+    font-style: italic;
 }

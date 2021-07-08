@@ -24,7 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('app/img/favicon.ico')))
+    path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('app/img/favicon.ico'))),
+    path('', include('pwa.urls')),
 ]
 
 admin.site.site_title = "Tienda de flores"

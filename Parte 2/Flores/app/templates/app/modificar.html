@@ -9,11 +9,11 @@
             {% csrf_token %}
             <table>
                 {{ form|crispy }}
-            </table>
             <div class="buttons" style="border-top-style: solid;border-top-width: 0px;margin-top: 50px;">   
                 <input type="submit" value="Modificar" class="btn-guardar">
                 <input type="reset" value="Limpiar" class="btn-limpiar"> 
             </div>
+            </table>
         </form>
         {{ mensaje }}
     </div>

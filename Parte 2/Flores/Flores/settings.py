@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app.apps.AppConfig',
     'crispy_forms',
+    'rest_framework',
+    'pwa',
 ]
 
 MIDDLEWARE = [
@@ -134,3 +136,30 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+PWA_APP_NAME = "Flores"
+
+PWA_APP_DESCRIPTION = "¡Tienda de articulos de jardinería para el vecinal!"
+
+PWA_APP_THEME_COLOR = "#04aff3"
+
+PWA_APP_BACKGROUND_COLOR = "#04aff4"
+
+PWA_APP_ICONS = [
+    {
+        "src" : "/static/app/img/144x144icono_JC.jpg",
+        "size" : "144x144",
+        "type" : "image/jpg",
+        "purpose": "any"
+    }
+]
+
+PWA_APP_ICONS_APPLE = [
+    {
+        "src" : "/static/app/img/144x144icono_JC.jpg",
+        "size" : "144x144",
+        "type" : "image/jpg",
+        "purpose": "any"
+    }    
+]
+PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'serviceworker.js')

@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
   <title>Jardín Comunitario JC</title>
 
+  {% load pwa %}
+
+  {% progressive_web_app_meta %}
+
 </head>
 <body>
   <!--Logo_Busqueda_Nav-->
@@ -20,14 +24,41 @@
         <!--<input type="text" name="search" placeholder="Busca algún producto...">-->
       </div>
       <nav>
-        <li><a href="{% url 'productos'%}" class="producto-btn">Productos</a></li>
-        <li><a href="{% url 'about' %}" class="contacto-btn">Contacto</a></li>
-        {% if user.is_authenticated %}
-        <li><a href="{% url 'lista_productos' %}" class="inventario-btn">Inventario</a></li>
-        <li><a href="{% url 'logout' %}" class="socio-btn">Cerrar Sesión de {{user.first_name}}</a></li>
-        {% else %}
-        <li><a href="{% url 'login' %}" class="socio-btn">Acceso Staff</a></li>
+        <li>
+          <a href="{% url 'productos'%}" class="producto-btn"><i class="fas fa-shopping-basket"></i></a>
+        </li>
+        <li>
+          <a href="{% url 'about' %}" class="contacto-btn"><i class="fas fa-phone"></i></a>
+        </li>
+        
+        {% if perms.app.delete_user %}
+          <li>
+            <a href="{% url 'lista_productos' %}" class="inventario-btn"><i class="fas fa-boxes"></i></a>
+          </li>
+          <li>
+            <a href="{% url 'lista_suscripcion' %}" class="inventario-btn"><i class="fas fa-users"></i></a>
+          </li>
+          <li>
+            <a href="{% url 'descuentos' %}" class="inventario-btn"><i class="fas fa-percent"></i></a>
+          </li>
         {% endif %}
+
+        {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'logout' %}" class="socio-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i> {{user.first_name}}</a>
+        </li>
+        <li>
+          <a href="{% url 'suscripcion' %}" class="socio-btn" id="logout-btn">Suscripción</a>
+        </li>
+        <li>
+          <a href="{% url 'carrito' %}" class="socio-btn" id="logout-btn" ><i class="fas fa-shopping-cart"></i></a>
+        </li>
+        {% else %}
+        <li>
+          <a href="{% url 'login' %}" class="socio-btn"><i class="fas fa-sign-in-alt"></i></a>
+        </li>
+        {% endif %}
+        <div class="animation start-home"></div>
       </nav>
     </header>
   </div>

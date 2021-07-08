@@ -22,6 +22,7 @@ function confirmarEliminar(id){
     })
 }
 
+
 function confirmarAgregar(id){
     Swal.fire({
         title: '¿Quieres agregar un nuevo producto?',
